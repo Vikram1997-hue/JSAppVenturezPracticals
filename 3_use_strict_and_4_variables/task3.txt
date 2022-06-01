@@ -1,0 +1,2 @@
+const BIRTHDAY --> since value is known before execution time.
+const age --> since value is not known in advance and has to be calculated.
