@@ -1,0 +1,48 @@
+let a = 1, b = 1;
+
+let c = ++a; //a becomes 2 (since prefix). c then gets this new value of a
+let d = b++; //d first becomes 1, then increment happens, so b=2.
+
+/*final values:
+    a = 2
+    b = 2
+    c = 2
+    d = 1
+*/
+
+
+
+--------------------------------------------------------------------------
+
+let a = 2;
+
+let x = 1 + (a *= 2); //The brackets override all precedence, so a*=2 yields a = 4. x is then set to 1+4 = 5.
+
+//final values: x = 5, a = 4
+
+
+
+---------------------------------------------------------------------------
+
+"" + 1 + 0      //10 as a string (+ has polymorphism)
+
+            //since other mathematical operators dont have polymorphism w.r.t. strings and numbers - 
+"" - 1 + 0      //-1
+true + false    //1
+6 / "3"         //2
+"2" * "3"       //6
+
+4 + 5 + "px"    //9px (left-to-right execution of JS)
+"$" + 4 + 5     //$45 (left-to-right execution of JS)
+
+"4" - 2         //2
+
+"4px" - 2       //NaN (4px could not be converted to number)
+
+"  -9  " + 5    //polymorphism of + causes concatenation. ans: "  -9  5"  
+"  -9  " - 5    //trim => "-9" => -9 as a number - 5 = -14
+
+null + 1        //1 (null becomes 0 as a number)
+undefined + 1   //NaN
+" \t \n" - 2    //-2
+
