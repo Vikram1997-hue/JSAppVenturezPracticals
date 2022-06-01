@@ -1,0 +1,7 @@
+5 > 4                   //true (numbers)
+"apple" > "pineapple"   //false (a < p)
+"2" > "12"              //true (Unicode 2 > Unicode 1)
+undefined == null       //true. null and undefined equal only each other 
+undefined === null      //false. strict equality
+null == "\n0\n"         //false. null == only undefined and nothing else
+null === +"\n0\n"       //false. same as above => values dont match.
