@@ -1,0 +1,39 @@
+TASK 1
+
+let i = 3;
+
+while (i) {
+  alert( i-- );
+} 
+//Last value printed is 1. Then i becomes 0, which is falsy, so loop breaks
+
+
+-----------------------------------------------------------------------
+TASK 2
+
+//Variant 1 - 
+let i = 0;
+while (++i < 5) alert( i );
+//OUTPUT (alerts): 1, then 2, then 3, then 4.
+
+
+//Variant 2 -
+let i = 0;
+while (i++ < 5) alert( i );
+//OUTPUT (alerts): 1, then 2, then 3, then 4, then 5.
+
+
+------------------------------------------------------------------------
+TASK 3
+
+for (let i = 0; i < 5; i++) alert( i ); //0,1,2,3,4
+
+for (let i = 0; i < 5; ++i) alert( i ); //0,1,2,3,4
+
+This is because the sequence of execution is - initialization, condition, body, updation,
+                                                               condition, body, updation,
+                                                               condition, body, updation,...
+
+                                                                
+
+--------------------------------------------------------------------------
