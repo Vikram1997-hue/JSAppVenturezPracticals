@@ -10,6 +10,6 @@ function getMaxSubSum(arr) {
         sum = Math.max(sum, currentSum);
     }
 
-    return sum;
+    return sum >=0 ? sum : 0;
 }
 
