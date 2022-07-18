@@ -1,12 +1,35 @@
 //Downward Triangle Star Pattern
 
-let noOfRows = 10;
 
-for(let i=noOfRows ; i>=1 ; i--) {
+//tried 3 different variations
+let height = 5;
 
-    for(let j=noOfRows-i ; j>0 ; j--)
+for(let i=1 ; i<=height ; i++) {
+    for(let j=height ; j>=i ; j--)
+        process.stdout.write("*")
+    console.log()
+}
+
+console.log("\n\n")
+
+for(let i=1 ; i<=height ; i++) {
+
+    for(let j=1 ; j<i ; j++)
         process.stdout.write(" ")
-    for(let j=2*(i-1)+1 ; j>=1 ; j--)
+    for(let j=i ; j<=height ; j++)
+        process.stdout.write("*")
+    console.log()
+}
+
+console.log("\n\n")
+
+
+for(let i=1 ; i<=height ; i++) {
+    for(let j=height ; j>=i ; j--)
+        process.stdout.write("*")
+    for(let j=1 ; j<=2*(i-1) ; j++)
+        process.stdout.write(" ")
+    for(let j=height ; j>=i ; j--)
         process.stdout.write("*")
     console.log()
 }
